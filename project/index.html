@@ -1,0 +1,90 @@
+
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nanafie hotel</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+            <img src="images/logo.jpg" alt="nanafie hotel logo" class="logo" width="50" height="50">
+
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li><br>
+                <li><a href="#">About</a></li><br>
+                <li><a href="#">Services</a></li><br>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="cta-nav">
+            <a href="#" class="cta">Book Now</a>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+    <h1>Welcome to nanafie hotel</h1>
+    <p>Experience comfort and luxury at the heart of the city.</p>
+        <a href="#" class="cta">Explore Our Rooms</a>
+        </div>
+
+    </section>
+    <section class="rooms">
+        <h2>our rooms</h2>
+        <div class="room-grid">
+            <div class="room-card">
+                <img src="images/deluxeroom.jpg" alt="deluxeroom">
+                <h3>Deluxe Room</h3>
+                <p>A spacious room with a king-sized bed and a beautiful view.</p>
+                <a href="#" class="cta">Book Now</a>
+            </div>
+
+            <div class="room-card">
+                <img src="images/suiteroom.jpg" alt="suiteroom">
+                <h3>Suite Room</h3>
+                <p>Experience luxury in our suite rooms with premium amenities.</p>
+                <a href="#" class="cta">Book Now</a>
+            </div>
+
+            <div class="room-card">
+                <img src="images/suite2.jpg" alt="junior suite">
+                <h3>Junior Suite</h3>
+                <p>Perfect for business travelers, offering a blend of comfort and functionality.</p>
+                <a href="#" class="cta">Book Now</a>
+            </div>
+
+            <div class="room-card">
+                <img src="images/standardroom.jpg" alt="standardroom">
+                <h3>Standard Room</h3>
+                <p>Comfortable and affordable rooms for a pleasant stay.</p>
+                <a href="#" class="cta">Book Now</a>
+
+            </div>
+        </div>
+    </section>
+    <section class="booking">
+        <h2>Book Your Stay</h2>
+        <form class="booking-form">
+            <label for="name">Enter your full name</label>
+            <input type="text" id="name" name="name" placeholder="your full name " required>
+            <label for="email">Enter your email</label>
+            <input type="email" id="email" name="email" placeholder="example@example.com " required>
+            <label for="checkin">date of check-in</label>
+            <input type="date" id="checkin" name="checkin" required>
+            <label for="checkout">date of check-out</label>
+            <input type="date" id="checkout" name="checkout" required>
+            <label for="guests">Number of guests</label>
+            <input type="number" id="guests" name="guests" placeholder="Enter the number of guests"  min="1" value="1">
+            <button type="submit" class="cta">confirm booking</button>
+        </form>
+
+    </section>
+    <footer>
+        <p>&copy; 2023 Nanafie Hotel. All rights reserved.</p>
+    </footer>
+</body>
+</html>

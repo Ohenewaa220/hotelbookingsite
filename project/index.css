@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+header {
+ display: flex;
+  justify-content: space-between; /* space between logo and actions */
+  align-items: center;
+  padding: 5px ; 
+  margin: 0;
+  background-color: #6d7755;
+  height: 150px;
+
+}
+
+.logo img {
+  width: 20px;
+  object-fit: contain; /* keeps image from looking squashed */
+  border-radius: 50%;
+  display: flex;
+}
+
+.nav-links ul {
+  flex: 1;                    /* take remaining space between logo and actions */
+  display: flex;              /* create a flex container for centering */
+  justify-content: center; 
+  gap: 25px;   /* center the UL horizontally */
+  color: rgb(196, 193, 196);
+  list-style: none;           /* remove default list styling */
+}
+.nav-links a {
+  text-decoration: none;
+  color: rgb(196, 193, 196);
+  font-size: 18px;
+}
+
+
+.nav-links a:hover{
+  opacity: 0.7;
+}
+.cta-nav a {
+  display: flex;
+  text-decoration: none;
+  color: rgb(196, 193, 196);
+  font-size: 18px;
+  padding-right: 50px;
+}
+/* Hero Section */
+.hero {
+  height: 100vh;   /* take full screen height */
+  background: url("images/hotel.jpg") no-repeat center center/cover;
+
+  color: white;
+  padding: 50px;            /* small padding for mobile */
+  position: relative;
+
+}
+
+/* Overlay (optional, darkens background for readability) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* semi-transparent black */
+  z-index: 1;
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2; /* keep text above overlay */
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-content .cta {
+  background: #f9d342;
+  color: #619fc5;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-content .cta:hover {
+  background: white;
+  color: #1e3c72;
+}
+.rooms {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.rooms h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #223a12;
+}
+
+.room-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  height: 100%;
+} 
+
+.room-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  padding-bottom: 20px;
+
+}
+.room-card:hover {
+  transform: translateY(-10px);
+}
+.room-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Room Title + Text */
+.room-card h3 {
+  font-size: 1.5rem;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.room-card p {
+  font-size: 1rem;
+  padding: 0 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Reuse Hero Button */
+.room-card .cta {
+  background: #1e3c72;
+  color: white;
+  padding: 10px 30px;
+  padding-bottom: 15px;
+  bottom: 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.room-card .cta:hover {
+  background: #f9d342;
+  color: #1e3c72;
+}
+
+.booking {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+.booking h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #1e3c72;
+}
+.booking-form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 15px;
+  text-align: left;
+  max-width: 700px;
+
+}
+.booking-form label{
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  display: inline;
+  margin-bottom: 30px;
+}
+.booking-form input{
+  padding: 12px;
+  border: 3px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  font-size: 1rem;
+}
+.booking-form button {
+background: #1e3c72;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: center;
+  margin-top: 20px;
+}
+.booking-form button:hover{
+  background: #f9d342;
+  color: #1e3c72;
+}
+footer{
+  text-align: end;
+}
+
+@media(max-width: 768px) {
+    .hero-content h1 {
+    font-size: 2rem;   /* smaller heading */
+  }
+
+  .hero-content p {
+    font-size: 1rem;   /* smaller paragraph */
+  }
+  .rooms-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+   .booking-form {
+    max-width: 400px;
+  }
+}
+
+
+  @media(max-width: 480px) {
+     .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+   
+  .rooms-grid {
+    grid-template-columns: 1fr; /* stack cards in one column */
+  }
+
+  .room-card img {
+    height: 150px; /* smaller images */
+  }
+   .booking-form {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .booking h2 {
+    font-size: 2rem;
+  }
+}
